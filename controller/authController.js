@@ -1,7 +1,7 @@
 import asyncHandler from "express-async-handler";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import User from "../model/user.js";
+import User from "../model/User.js";
 export const login = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
   const isFound = await User.findOne({ email });
