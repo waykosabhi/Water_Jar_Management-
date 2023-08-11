@@ -1,6 +1,6 @@
 import asyncHandler from "express-async-handler";
 import bcrypt from "bcrypt";
-import User from "../model/user.js";
+import User from "../model/User.js";
 
 export const getAllUsers = asyncHandler(async (req, res) => {
   const result = await User.find({ role: "customer" });
